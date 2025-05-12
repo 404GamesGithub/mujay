@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Mujay</title>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+	<script>
+		if (window.Capacitor && window.Capacitor.isNativePlatform() && window.Capacitor.isNativePlatform()) {
+			document.documentElement.style.setProperty('--bottom-nav-padding', '48px');
+		} else {
+			document.documentElement.style.setProperty('--bottom-nav-padding', '0px');
+		}
+	</script>
+</html>

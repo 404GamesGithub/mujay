@@ -1,0 +1,263 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body,
+html,
+:root {
+	--m3-font: Inter, MonaspaceKrypton, sans-serif !important;
+	font-family: var(--m3-font);
+	scrollbar-width: thin;
+}
+
+@media (max-width: 338px) {
+	.nav .m3-font-title-small {
+		display: none;
+	}
+}
+a[href*='source:bottom-nav-settings'] {
+	max-width: 4.5rem;
+	min-width: 4.5rem !important;
+	gap: 0 !important;
+}
+.placeholder {
+	display: none !important;
+}
+
+@media (max-width: 390px) {
+	.rep,
+	.shuf {
+		display: none !important;
+	}
+}
+@media (min-width: 391px) {
+	.repSmol,
+	.shufSmol {
+		display: none !important;
+	}
+}
+
+.errPre {
+	@apply text-sm p-3 rounded-lg bg-surface-container-low ring-2 ring-surface-container-lowest text-error whitespace-pre-wrap mt-2;
+	font-family: 'MonaspaceKrypton', monospace;
+}
+.errCode {
+	@apply p-1 rounded-lg bg-surface-container-low ring-2 ring-surface-container-lowest text-error whitespace-pre-wrap mx-2;
+}
+
+:root[theme='catppuccin'],
+html[theme='catppuccin'],
+body[theme='catppuccin'] {
+	--m3-scheme-primary: 203 166 247 !important;
+	--m3-scheme-on-primary: 49 50 68 !important;
+	--m3-scheme-primary-container: 69 71 90 !important;
+	--m3-scheme-on-primary-container: 203 166 247 !important;
+	--m3-scheme-secondary: 166 173 200 !important;
+	--m3-scheme-on-secondary: 49 50 68 !important;
+	--m3-scheme-secondary-container: 49 50 68 !important;
+	--m3-scheme-on-secondary-container: 166 173 200 !important;
+	--m3-scheme-tertiary: 166 227 161 !important;
+	--m3-scheme-on-tertiary: 30 30 46 !important;
+	--m3-scheme-tertiary-container: 69 71 90 !important;
+	--m3-scheme-on-tertiary-container: 166 227 161 !important;
+	--m3-scheme-error: 243 139 168 !important;
+	--m3-scheme-on-error: 30 30 46 !important;
+	--m3-scheme-error-container: 69 71 90 !important;
+	--m3-scheme-on-error-container: 243 139 168 !important;
+	--m3-scheme-background: 30 30 46 !important;
+	--m3-scheme-on-background: 205 214 244 !important;
+	--m3-scheme-surface: 30 30 46 !important;
+	--m3-scheme-on-surface: 205 214 244 !important;
+	--m3-scheme-surface-variant: 49 50 68 !important;
+	--m3-scheme-on-surface-variant: 186 194 222 !important;
+	--m3-scheme-outline: 147 153 178 !important;
+	--m3-scheme-outline-variant: 127 132 156 !important;
+	--m3-scheme-shadow: 17 17 27 !important;
+	--m3-scheme-scrim: 17 17 27 !important;
+	--m3-scheme-inverse-surface: 205 214 244 !important;
+	--m3-scheme-inverse-on-surface: 30 30 46 !important;
+	--m3-scheme-inverse-primary: 137 180 250 !important;
+	--m3-scheme-surface-bright: 69 71 90 !important;
+	--m3-scheme-surface-container: 49 50 68 !important;
+	--m3-scheme-surface-container-high: 69 71 90 !important;
+	--m3-scheme-surface-container-highest: 69 71 90 !important;
+	--m3-scheme-surface-container-low: 30 30 46 !important;
+	--m3-scheme-surface-container-lowest: 24 24 37 !important;
+	--m3-scheme-surface-dim: 17 17 27 !important;
+	--m3-scheme-surface-tint: 203 166 247 !important;
+
+	@apply text-[rgb(205_214_244)];
+}
+:root[theme='oled'],
+html[theme='oled'],
+body[theme='oled'] {
+	--m3-scheme-primary: 58 227 116 !important;
+	--m3-scheme-on-primary: 0 0 0 !important;
+	--m3-scheme-primary-container: 16 16 16 !important;
+	--m3-scheme-on-primary-container: 58 227 116 !important;
+	--m3-scheme-secondary: 255 255 255 !important;
+	--m3-scheme-on-secondary: 0 0 0 !important;
+	--m3-scheme-secondary-container: 12 12 12 !important;
+	--m3-scheme-on-secondary-container: 255 255 255 !important;
+	--m3-scheme-tertiary: 66 173 245 !important;
+	--m3-scheme-on-tertiary: 0 0 0 !important;
+	--m3-scheme-tertiary-container: 25 25 25 !important;
+	--m3-scheme-on-tertiary-container: 66 173 245 !important;
+	--m3-scheme-error: 245 66 66 !important;
+	--m3-scheme-on-error: 0 0 0 !important;
+	--m3-scheme-error-container: 35 35 35 !important;
+	--m3-scheme-on-error-container: 245 66 66 !important;
+	--m3-scheme-background: 0 0 0 !important;
+	--m3-scheme-on-background: 255 255 255 !important;
+	--m3-scheme-surface: 0 0 0 !important;
+	--m3-scheme-on-surface: 255 255 255 !important;
+	--m3-scheme-surface-variant: 45 45 45 !important;
+	--m3-scheme-on-surface-variant: 150 150 150 !important;
+	--m3-scheme-outline: 100 100 100 !important;
+	--m3-scheme-outline-variant: 75 75 75 !important;
+	--m3-scheme-shadow: 0 0 0 !important;
+	--m3-scheme-scrim: 0 0 0 !important;
+	--m3-scheme-inverse-surface: 200 200 200 !important;
+	--m3-scheme-inverse-on-surface: 0 0 0 !important;
+	--m3-scheme-inverse-primary: 255 230 0 !important;
+	--m3-scheme-surface-bright: 45 45 45 !important;
+	--m3-scheme-surface-container: 12 12 12 !important;
+	--m3-scheme-surface-container-high: 16 16 16 !important;
+	--m3-scheme-surface-container-highest: 32 32 32 !important;
+	--m3-scheme-surface-container-low: 8 8 8 !important;
+	--m3-scheme-surface-container-lowest: 0 0 0 !important;
+	--m3-scheme-surface-dim: 0 0 0 !important;
+	--m3-scheme-surface-tint: 58 227 116 !important;
+
+	@apply text-white;
+}
+@font-face {
+	font-family: MonaspaceKrypton;
+	src: url(/kryptonVF.woff2);
+}
+:root[hacker='true'],
+html[hacker='true'],
+body[hacker='true'] {
+	--m3-font: MonaspaceKrypton, monospace !important;
+	font-family: var(--m3-font);
+}
+body[hacker='true'] * {
+	border-radius: 0px !important;
+}
+:root[theme='highseas'],
+html[theme='highseas'],
+body[theme='highseas'] {
+	--m3-scheme-primary: 144 75 64;
+	--m3-scheme-on-primary: 255 255 255;
+	--m3-scheme-primary-container: 255 218 212;
+	--m3-scheme-on-primary-container: 115 52 42;
+	--m3-scheme-inverse-primary: 255 180 168;
+	--m3-scheme-secondary: 119 86 81;
+	--m3-scheme-on-secondary: 255 255 255;
+	--m3-scheme-secondary-container: 255 218 212;
+	--m3-scheme-on-secondary-container: 93 63 59;
+	--m3-scheme-tertiary: 112 92 46;
+	--m3-scheme-on-tertiary: 255 255 255;
+	--m3-scheme-tertiary-container: 251 223 166;
+	--m3-scheme-on-tertiary-container: 86 68 25;
+	--m3-scheme-error: 186 26 26;
+	--m3-scheme-on-error: 255 255 255;
+	--m3-scheme-error-container: 255 218 214;
+	--m3-scheme-on-error-container: 147 0 10;
+	--m3-scheme-background: 255 248 246;
+	--m3-scheme-on-background: 35 25 24;
+	--m3-scheme-surface: 255 248 246;
+	--m3-scheme-on-surface: 35 25 24;
+	--m3-scheme-surface-variant: 245 221 218;
+	--m3-scheme-on-surface-variant: 83 67 65;
+	--m3-scheme-inverse-surface: 57 46 44;
+	--m3-scheme-inverse-on-surface: 255 237 234;
+	--m3-scheme-outline: 133 115 112;
+	--m3-scheme-outline-variant: 216 194 190;
+	--m3-scheme-shadow: 0 0 0;
+	--m3-scheme-scrim: 0 0 0;
+	--m3-scheme-surface-dim: 232 214 211;
+	--m3-scheme-surface-bright: 255 248 246;
+	--m3-scheme-surface-container-lowest: 255 255 255;
+	--m3-scheme-surface-container-low: 255 240 238;
+	--m3-scheme-surface-container: 252 234 231;
+	--m3-scheme-surface-container-high: 247 228 225;
+	--m3-scheme-surface-container-highest: 241 223 220;
+	--m3-scheme-surface-tint: 144 75 64;
+}
+:root[theme='highseas'],
+html[theme='highseas'],
+body[theme='highseas'] .root {
+	background-image: url(/highseas-rot.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: black;
+}
+:root[theme='highseas'],
+html[theme='highseas'],
+body[theme='highseas'] .m3-container {
+	backdrop-filter: blur(10px);
+}
+
+@font-face {
+	font-family: 'gothic';
+	src:
+		local('gothic'),
+		url('/gothic.woff') format('woff');
+}
+
+.root[theme='weezer'] {
+	transition: background-color 0.5s !important;
+	background: rgb(0 156 207);
+}
+html[theme='weezer'] *,
+body[theme='weezer'] *,
+:root[theme='weezer'] {
+	font-family: 'Century Gothic', CenturyGothic, 'gothic', sans-serif;
+	text-transform: lowercase;
+
+	--m3-scheme-primary: 20 176 227 !important;
+	--m3-scheme-primary-container: 0 136 187 !important;
+	--m3-scheme-secondary-container: 0 116 167 !important;
+	--m3-scheme-on-secondary: 0 0 28 !important;
+	--m3-scheme-secondary: 0 136 187 !important;
+	--m3-scheme-surface-bright: 60 206 255 !important;
+	--m3-scheme-inverse-surface: 0 0 28 !important;
+	--m3-scheme-on-inverse-surface: 0 156 207 !important;
+	--m3-scheme-surface: 0 136 187 !important;
+	--m3-scheme-surface-container: 0 136 187 !important;
+	--m3-scheme-surface-low: 0 116 167 !important;
+	--m3-scheme-surface-lowest: 0 96 137 !important;
+	--m3-scheme-surface-container-high: 0 156 207 !important;
+	--m3-scheme-surface-container-highest: 0 166 217 !important;
+	--m3-scheme-on-surface: 0 0 28 !important;
+	--m3-scheme-background: 0 156 207 !important;
+	--m3-scheme-on-background: 0 0 28 !important;
+	--m3-scheme-on-primary: 0 0 28 !important;
+	--m3-scheme-on-surface-variant: 0 136 187 !important;
+	--m3-scheme-surface-variant: 0 0 28 !important;
+	--m3-scheme-outline: 0 96 137 !important;
+
+	transition: color 0.25s !important;
+	transition-delay: 0ms !important;
+}
+body[theme='weezer'] main {
+	color: rgb(0 0 28);
+}
+body[theme='weezer'] main::before {
+	content: 'schlatt hates weezer memes';
+	position: fixed;
+	top: 64px;
+	left: 64px;
+}
+body[theme='weezer'] .cv2 {
+	opacity: 0;
+}
+body[theme='weezer'] .name {
+	text-transform: none !important;
+}
+body[theme='weezer'] .m3-font-body-large {
+	color: rgb(0 0 28) !important;
+}

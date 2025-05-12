@@ -1,0 +1,3 @@
+a.a {
+	@apply text-primary hover:underline-offset-2 underline duration-200;
+}

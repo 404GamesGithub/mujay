@@ -1,0 +1,1 @@
+export DESKTOP=1 && bun run build
