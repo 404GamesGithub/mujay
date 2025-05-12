@@ -46,7 +46,7 @@ jobs:
         with:
           # Use the deploy_key input instead of github_token for SSH authentication
           # Reference the SECRET NAME that stores your PRIVATE KEY
-          deploy_key: ${{ secrets.SHA256:lpTEjhaVXun/KNqtemSDIjxyZM4KbhxgHIalYrBrp/c }}
+          deploy_key: ${{ secrets.Mujay }}
           publish_dir: ./build
           publish_branch: gh-pages
           # Optionally, specify the repository if it's different from the source
